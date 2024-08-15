@@ -1,0 +1,200 @@
+body
+{
+  font-family: "Noto Sans", sans-serif;
+}
+/* Container Styles */
+.app-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* List Container Styles */
+.list-container,
+.favorite-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Containers */
+.list-container:hover,
+.favorite-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove Button Specific Styles */
+.remove-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 4px rgba(255, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add Button Specific Styles */
+.add-btn {
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Remove Button */
+.remove-btn:hover {
+  background: #ff4b5c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+}
+
+/* Hover Effect for Add Button */
+.add-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+/* Active State for Remove Button */
+.remove-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(255, 0, 0, 0.2);
+}
+
+/* Focus Outline for Remove Button */
+.remove-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 28, 56, 0.4);
+}
+
+/* Header Styles */
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* List Styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Alignment for List Items */
+.student-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.student-number {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.student-name {
+  flex-grow: 1;
+}
+
+/* Hover Effect for List Items */
+li:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list-container,
+  .favorite-container {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  button {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 480px) {
+
+  .list-container,
+  .favorite-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  li {
+    padding: 8px;
+    margin: 8px 0;
+  }
+
+  button {
+    padding: 8px;
+  }
+}
